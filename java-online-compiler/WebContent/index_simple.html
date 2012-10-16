@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Java代码在线编译系统</title>
+</head>
+<body style="margin: auto; width: 1000px;">
+	<div id="header">
+	<h1>Java代码在线编译系统</h1>
+	</div><br/>
+	<form>
+	<label>ClassName: </label><input id="fileName" type="text" name="fileName" value="Hello"><br/>
+	<label>Code: </label><br/>
+	<textarea id="code" name="code" style="width: 1000px; height: 200px" >
+public class Hello {
+	public static void main(String[] args) {
+		System.out.println("Hello, World!");
+	}
+}
+	</textarea><br/>
+	<input id="run" name="run" type="submit" value="Try it!" onclick="javascript: return false;" />
+	</form>
+	<pre id="result">
+	</pre>
+	<div id="shit"></div>
+	
+	<script type="text/javascript">
+	var r;
+		$(function() {
+			$("#run").click(function() {
+				$.post("compile", 
+					{
+					fileName: $("#fileName").val(), 
+					code: $("#code").val()
+					}, 
+					function(result) {
+						$("#result").html(unescape(result));
+					}
+				);
+			});
+		});
+	</script>
+	<div id="rooter">
+		<hr>
+		<p align="center"><a href="index.html" style="color: white;">完整版</a>  2012版权所有 &copy; icejoywoo</p>
+	</div>
+</body>
+</html>
