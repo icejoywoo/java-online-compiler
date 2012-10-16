@@ -1,0 +1,37 @@
+body {
+	padding: 10px;
+	width: 1000px;
+	height: 80%;
+	margin: auto;
+	background-color: #336699;
+	padding: 10px;
+}
+
+#header {
+	padding: 10px;
+	background-color: #99CCCC;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+body label {
+	margin: 5px;
+	padding: 10px;
+	color: white;
+}
+
+#result {
+	color: white;
+	padding: 10px;
+	background-color: black;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#rooter p {
+	color: white;
+}
