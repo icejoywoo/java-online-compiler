@@ -78,7 +78,7 @@
 	 * server runs on a windows platform, to avoid a message box, if you try to access
 	 * an empty removable drive (See KNOWN BUGS in Readme.txt).
 	 */
-	private static final String[] FORBIDDEN_DRIVES = {"C:\\", "D:\\", "E:\\", "F:\\"};
+	private static final String[] FORBIDDEN_DRIVES = {"C:\\", "D:\\", "E:\\", "F:\\", "G:\\", "H:\\", "J:\\", "K:\\", "L:\\"};
 
 	/**
 	 * Command of the shell interpreter and the parameter to run a programm
