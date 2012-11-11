@@ -16,7 +16,7 @@
             the url will be rewritten.
         </note>
         <from>/test/status/</from>
-        <to type="redirect">%{context-path}/rewrite-status</to>
+        <to type="redirect">%{context-path}/status</to>
     </rule>
 
 
@@ -29,14 +29,14 @@
             url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks
             in your pages.
         </note>
-        <from>/rewrite-status</from>
+        <from>/status</from>
         <to>/test/status/</to>
     </outbound-rule>
     
     <rule match-type="regex">
         <note></note>
-        <from>/index</from>
-        <to type="redirect">%{context-path}/index.html</to>
+        <from>/index/</from>
+        <to type="forward">/index.html</to>
     </rule>
 	
     <!--

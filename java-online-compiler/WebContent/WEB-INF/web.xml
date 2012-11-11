@@ -5,6 +5,29 @@
 	<filter>
 	    <filter-name>UrlRewriteFilter</filter-name>
 	    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	    
+	    <!-- you can change status path so that it does not
+	    conflict with your installed apps (note, defaults
+	    to /rewrite-status) note, must start with / -->
+	    <init-param>
+	        <param-name>statusPath</param-name>
+	        <param-value>/status</param-value>
+	    </init-param>
+	
+	    <!-- you can disable status page if desired
+	    can be: true, false (default true) -->
+	    <init-param>
+	        <param-name>statusEnabled</param-name>
+	        <param-value>true</param-value>
+	    </init-param>
+	    
+	    <!-- you may want to allow more hosts to look at the status page
+	    statusEnabledOnHosts is a comma delimited list of hosts, * can
+	    be used as a wildcard (defaults to "localhost, local, 127.0.0.1") -->
+	    <init-param>
+	        <param-name>statusEnabledOnHosts</param-name>
+	        <param-value>localhost</param-value>
+	    </init-param>
 	</filter>
 	<filter-mapping>
 	    <filter-name>UrlRewriteFilter</filter-name>
