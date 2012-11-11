@@ -38,6 +38,11 @@
         <from>/index/</from>
         <to type="forward">/index.html</to>
     </rule>
+    
+    <outbound-rule>
+        <from>/index.html</from>
+        <to>/index/</to>
+    </outbound-rule>
 	
     <!--
 
