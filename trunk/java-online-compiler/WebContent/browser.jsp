@@ -528,11 +528,11 @@
 		}
 	} //End of class Writer2Stream
 
-	static Vector expandFileList(String[] files, boolean inclDirs) {
+	static Vector expandFileList(String[] files, boolean inclDirs) throws UnsupportedEncodingException {
 		Vector v = new Vector();
 		if (files == null) return v;
 		for (int i = 0; i < files.length; i++)
-			v.add(new File(URLDecoder.decode(files[i]), "UTF-8"));
+			v.add(new File(URLDecoder.decode(files[i], "UTF-8")));
 		for (int i = 0; i < v.size(); i++) {
 			File f = (File) v.get(i);
 			if (f.isDirectory()) {
