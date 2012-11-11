@@ -43,6 +43,17 @@
         <from>/index.html</from>
         <to>/index/</to>
     </outbound-rule>
+    
+    <rule match-type="regex">
+        <note></note>
+        <from>/simple/</from>
+        <to type="forward">/index_simple.html</to>
+    </rule>
+    
+    <outbound-rule>
+        <from>/index_simple.html</from>
+        <to>/simple/</to>
+    </outbound-rule>
 	
     <!--
 
